@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Service Organization - Career Guidance Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">PSO</div>
+            <div>
+                <h1 class="pso-heading">PSO - పబ్లిక్ సర్వీస్ ఆర్గానైజేషన్</h1>
+                <p>Public Service Organization | Rural Youth & Career Guidance Hub</p>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+        <a href="#flowchart">Career Roadmap</a>
+        <a href="#guidance">Detailed Guidance</a>
+        <a href="#jobs">Govt Jobs</a>
+        <a href="#news">News & Events</a>
+        <a href="#admin">Post Update</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Honourable Founder Special Section -->
+        <section id="founder" class="card founder-card">
+            <div class="founder-badge">👑 Founder & Chairman</div>
+            <div class="founder-content">
+                <div class="founder-avatar">
+                    <img src="kullayappa.jpeg" alt="Hon'ble Mr. K. Kullayappa" class="founder-img">
+                </div>
+                <div class="founder-info">
+                    <h3 class="founder-name">Hon'ble Mr. K. KULLAYAPPA</h3>
+                    <p class="founder-tagline">Founder & Chairman|(Public Service Organization)</p>
+                    <p class="founder-quote">
+                        "గ్రామీణ ప్రాంత విద్యార్థులకు సరైన దిశానిర్దేశం చేసి, వారి భవిష్యత్తుకు బలమైన పునాది వేయడమే మా ముఖ్య సంకల్పం."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero / About Section -->
+        <section id="about" class="card hero-card">
+            <span class="hero-badge">🌟 Empowering Rural Youth</span>
+            <h2>గ్రామీణ ఆణిముత్యాలకు రక్షణ.. భావి భారతానికి మార్గదర్శనం!</h2>
+            <p class="hero-description">
+                గ్రామీణ ప్రాంతాల్లోని విద్యార్థుల్లో దాగిఉన్న <strong>నైపుణ్యాలను (Skills) వెలికితీయడం</strong>, మిడిల్ క్లాస్ యూత్‌కి సరైన <strong>Life Goals</strong> నిర్దేశించి ఉన్నత స్థాయికి చేర్చడమే మన <strong>Public Service Organization (PSO)</strong> ముఖ్య ఆశయం.
+            </p>
+        </section>
+
+        <!-- Visual Flowchart Section -->
+        <section id="flowchart" class="card">
+            <h2 class="card-title">🛣️ Career Flowchart Overview (కెరీర్ రోడ్‌మ్యాప్)</h2>
+            <div class="flowchart-box">
+                <div class="flow-step main-step">10th Class (పదో తరగతి)</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-grid-4">
+                    <div class="flow-subcard">
+                        <h4>Intermediate</h4>
+                        <p>(2 Years)</p>
+                        <small>MPC, BiPC, CEC, MEC, HEC</small>
+                    </div>
+                    <div class="flow-subcard">
+                        <h4>Polytechnic</h4>
+                        <p>(3 Years)</p>
+                        <small>Civil, Mech, EEE, ECE, CSE</small>
+                    </div>
+                    <div class="flow-subcard">
+                        <h4>ITI Courses</h4>
+                        <p>(1-2 Years)</p>
+                        <small>Electrician, Fitter, Welder</small>
+                    </div>
+                    <div class="flow-subcard">
+                        <h4>Paramedical</h4>
+                        <p>(2-3 Years)</p>
+                        <small>DMLT, Dialysis, Ophthalmic</small>
+                    </div>
+                </div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-step main-step">Degree / B.Tech / Professional Courses</div>
+                <div class="flow-arrow">⬇️</div>
+                <div class="flow-grid-3">
+                    <div class="flow-subcard job-sub">
+                        <h4>IT & Private Jobs</h4>
+                        <small>Software, Data Analytics, AWS</small>
+                    </div>
+                    <div class="flow-subcard job-sub">
+                        <h4>Govt Jobs</h4>
+                        <small>SSC CGL, Banking, UPSC, Groups</small>
+                    </div>
+                    <div class="flow-subcard job-sub">
+                        <h4>Higher Education</h4>
+                        <small>M.Tech, MBA, MS Abroad, B.Ed</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Career Guidance Pathways -->
+        <section id="guidance" class="card">
+            <h2 class="card-title">🎯 Detailed Career Guidance Pathways (A to Z Guide)</h2>
+            <p class="subtitle">10వ తరగతి, ఇంటర్ మరియు డిగ్రీ కోర్సుల పూర్తి వివరాలు (తెలుగు & English):</p>
+
+            <div class="category-tags career-tabs">
+                <button class="tag-btn tab-btn active" onclick="openCareerTab(event, 'after10th')">🏫 10th Class Pathways</button>
+                <button class="tag-btn tab-btn" onclick="openCareerTab(event, 'after12th')">🎓 Intermediate Streams</button>
+                <button class="tag-btn tab-btn" onclick="openCareerTab(event, 'graduation')">💼 Degree Streams & Branches</button>
+            </div>
+
+            <!-- Tab 1: 10th Class Options -->
+            <div id="after10th" class="career-tab-content" style="display: block;">
+                <h3 class="tab-heading">🏫 10వ తరగతి తర్వాత ఉండే ప్రధాన మార్గాలు (Options After 10th)</h3>
+                <div class="bilingual-grid">
+                    <div class="bilingual-card">
+                        <span class="stream-badge btech-badge">Intermediate (2 Years)</span>
+                        <h3>1. ఇంటర్మీడియట్ (Higher Secondary)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> సైన్స్, కామర్స్ లేదా ఆర్ట్స్ గ్రూపులు ఎంచుకుని డిగ్రీ లేదా ప్రొఫెషనల్ కోర్సులకు పునాది వేసే మార్గం[cite: 1, 2].
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Standard 2-year academic foundation for higher university degrees and professional streams.
+                        </div>
+                    </div>
+
+                    <div class="bilingual-card">
+                        <span class="stream-badge bsc-badge">Polytechnic (3 Years)</span>
+                        <h3>2. పాలిటెక్నిక్ డిప్లొమా (Engineering Diploma)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> Civil, Mech, EEE, ECE, CSE బ్రాంచ్‌లలో ప్రాక్టికల్ ఇంజనీరింగ్[cite: 1, 2]. ECET ద్వారా నేరుగా B.Tech 2nd Year లో చేరవచ్చు[cite: 1, 2].
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Practical diploma engineering. Offers lateral entry into the 2nd year of B.Tech via ECET[cite: 1, 2].
+                        </div>
+                    </div>
+
+                    <div class="bilingual-card">
+                        <span class="stream-badge bcom-badge">ITI Courses (1-2 Years)</span>
+                        <h3>3. ITI - Industrial Training Institute</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> Electrician, Fitter, Welder వృత్తి విద్యలు[cite: 1, 2]. రైల్వేలు (RRB ALP), పరిశ్రమలలో త్వరిత ఉద్యోగాలు లభిస్తాయి[cite: 1, 2].
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Vocational technical training providing trade skills for quick employment in railways and industries[cite: 1, 2].
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Intermediate Groups -->
+            <div id="after12th" class="career-tab-content" style="display: none;">
+                <h3 class="tab-heading">📚 ఇంటర్మీడియట్ గ్రూపుల విశ్లేషణ (Intermediate Groups In-Depth)</h3>
+                <div class="bilingual-grid">
+                    
+                    <!-- MPC -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge btech-badge">MPC Group</span>
+                        <h3>1. MPC (Mathematics, Physics, Chemistry)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> ఇంజనీరింగ్ (B.Tech), ఐటీ, డిఫెన్స్ (UPSC NDA), మరియు మ్యాథ్స్ రీసెర్చ్ రంగాలు[cite: 1, 2].
+                            <p><strong>Advantages:</strong> ఐటీ రంగంలో విస్తృత అవకాశాలు; డిగ్రీలో కామర్స్/ఆర్ట్స్ కి కూడా మారవచ్చు[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> గణితం మరియు కాన్సెప్ట్స్ పై ఎక్కువ సమయం వెచ్చించి ప్రాక్టీస్ చేయాలి.</p>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Gateway to B.Tech, IT, NDA Defence, Architecture, and Data Analytics[cite: 1, 2].
+                            <p><strong>Advantages:</strong> High career versatility and flexibility to shift to Commerce/Arts[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> Requires intensive analytical problem-solving skills.</p>
+                        </div>
+                    </div>
+
+                    <!-- BiPC -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge bsc-badge">BiPC Group</span>
+                        <h3>2. BiPC (Biology, Physics, Chemistry)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> వైద్యం (MBBS/BDS), ఫార్మా (B.Pharm), నర్సింగ్, అగ్రికల్చర్, వెటర్నరీ సైన్స్[cite: 1, 2].
+                            <p><strong>Advantages:</strong> హెల్త్‌కేర్ రంగంలో సమాజంలో అత్యంత గౌరవప్రదమైన స్థిరమైన ఉద్యోగాలు[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> ఐటీ/కోడింగ్ వైపు వెళ్లడం కష్టం; మెడికల్ కోర్సుల వ్యవధి (5-6 ఏళ్లు) ఎక్కువ.</p>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Foundation for Medicine (MBBS), Pharmacy, Nursing, and Agriculture[cite: 1, 2].
+                            <p><strong>Advantages:</strong> Stable, high-respect healthcare career paths[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> Longer course durations and restricted paths toward pure IT jobs.</p>
+                        </div>
+                    </div>
+
+                    <!-- CEC / MEC -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge bcom-badge">CEC & MEC Group</span>
+                        <h3>3. CEC & MEC (Commerce, Economics, Civics / Maths)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> బ్యాంకింగ్, అకౌంటింగ్, బిజినెస్, CA (Chartered Accountancy), CMA, CS రంగాలకు ఉత్తమం[cite: 1, 2].
+                            <p><strong>Advantages:</strong> బిజినెస్, ఫైనాన్స్ రంగాల్లో బలమైన పునాది పడుతుంది[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> ఇంజనీరింగ్ లేదా మెడికల్ కోర్సులకు అర్హత ఉండదు[cite: 1, 2].</p>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Designed for Corporate Finance, Accounting, CA, CS, and Banking careers[cite: 1, 2].
+                            <p><strong>Advantages:</strong> Strong foundation in finance, taxation, and business management[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> Non-eligible for core engineering or medical degrees[cite: 1, 2].</p>
+                        </div>
+                    </div>
+
+                    <!-- HEC -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge ba-badge">HEC Group</span>
+                        <h3>4. HEC (History, Economics, Civics)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు:</strong> UPSC Civil Services (IAS/IPS), APPSC/TSPSC Groups, లా (Law), జర్నలిజం[cite: 1, 2].
+                            <p><strong>Advantages:</strong> ప్రభుత్వ ఉద్యోగ పోటీ పరీక్షలకు కావలసిన జనరల్ స్టడీస్ పునాది ఇక్కడే పడుతుంది[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> ప్రైవేట్ కార్పొరేట్ కంపెనీలలో ఐటీ/టెక్నికల్ ఉద్యోగాలు తక్కువ.</p>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English:</strong> Preparation ground for Civil Services (UPSC), State Public Exams, and Law (CLAT)[cite: 1, 2].
+                            <p><strong>Advantages:</strong> Ideal syllabus match for competitive exam aspirants[cite: 1, 2].</p>
+                            <p><strong>Disadvantages:</strong> Direct entry into private corporate sectors is limited.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tab 3: Degree Streams & Branches -->
+            <div id="graduation" class="career-tab-content" style="display: none;">
+                <h3 class="tab-heading">🎓 డిగ్రీ కోర్సులు - బ్రాంచ్‌లు & విశ్లేషణ (Degree Streams & Branches)</h3>
+                
+                <div class="bilingual-grid">
+                    <!-- B.Tech -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge btech-badge">B.Tech / B.E (4 Years)</span>
+                        <h3>1. B.Tech Branches (CSE, ECE, Civil, Mech)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు వివరణ:</strong>
+                            <ul>
+                                <li><strong>CSE (Computer Science):</strong> కోడింగ్, ఐటీ, AI & డేటా సైన్స్[cite: 1, 2]. (ఉద్యోగాలు: Software Engineer, Web Developer)[cite: 1, 2].</li>
+                                <li><strong>ECE (Electronics):</strong> మైక్రో ప్రొసెసర్లు, ఎలక్ట్రానిక్ చిప్‌లు[cite: 1, 2]. (ఉద్యోగాలు: Chip Designer, Embedded Engineer).</li>
+                                <li><strong>Civil & Mechanical:</strong> ఇన్ఫ్రాస్ట్రక్చర్ నిర్మాణాలు, యంత్రాల రూపకల్పన[cite: 1, 2]. (ఉద్యోగాలు: Site Engineer, RRB SSE)[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English Explanation:</strong>
+                            <ul>
+                                <li><strong>CSE:</strong> Focuses on programming, algorithms, AI, and cloud development[cite: 1, 2].</li>
+                                <li><strong>ECE:</strong> Deals with semiconductor chips, telecom networks, and embedded systems[cite: 1, 2].</li>
+                                <li><strong>Civil & Mechanical:</strong> Covers physical infrastructure, structural engineering, and robotics[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- B.Sc -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge bsc-badge">B.Sc Stream (3-4 Years)</span>
+                        <h3>2. B.Sc Branches (MPCS, BZC, Agriculture)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు వివరణ:</strong>
+                            <ul>
+                                <li><strong>MPCS (Maths, Physics, CS):</strong> ఐటీ ప్రాథమిక నాలెడ్జ్ మరియు సైన్స్ కాన్సెప్ట్స్ లభిస్తాయి[cite: 1, 2].</li>
+                                <li><strong>BZC (Botany, Zoology, Chem):</strong> మెడికల్ ల్యాబ్‌లు, ఫార్మా, ఫారెస్ట్ డిపార్ట్‌మెంట్ జాబ్స్[cite: 1, 2].</li>
+                                <li><strong>B.Sc Agriculture:</strong> పంటల దిగుబడి, సాయిల్ సైన్స్, అగ్రికల్చర్ ఆఫీసర్ (AEO) ఉద్యోగాలు[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English Explanation:</strong>
+                            <ul>
+                                <li><strong>MPCS:</strong> Blends pure sciences with core computer applications[cite: 1, 2].</li>
+                                <li><strong>BZC:</strong> Covers life sciences; entry into pharma, biotech, and forestry roles[cite: 1, 2].</li>
+                                <li><strong>B.Sc Agriculture:</strong> Focuses on agronomy, soil science, and agricultural extension[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- B.Com -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge bcom-badge">B.Com Stream (3-4 Years)</span>
+                        <h3>3. B.Com Branches (Computers & General)</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు వివరణ:</strong>
+                            <ul>
+                                <li><strong>B.Com Computers:</strong> అకౌంటింగ్‌తో పాటు Tally, SQL టూల్స్ నేర్పుతారు[cite: 1, 2]. (ఉద్యోగాలు: Accounts Executive, Data Analyst).</li>
+                                <li><strong>B.Com General:</strong> ప్యూర్ అకౌంటింగ్ & ఆడిటింగ్[cite: 1, 2]. CA, CMA, CS వంటి ప్రొఫెషనల్ కోర్సులకు అనుకూలం[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English Explanation:</strong>
+                            <ul>
+                                <li><strong>B.Com Computers:</strong> Combines commercial accounting with computer tools like Tally and SQL[cite: 1, 2].</li>
+                                <li><strong>B.Com General:</strong> Core financial accounting; excellent base for CA and CMA preparation[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- B.A, BBA & BCA -->
+                    <div class="bilingual-card">
+                        <span class="stream-badge ba-badge">B.A, BBA & BCA Stream</span>
+                        <h3>4. B.A (HEP), BCA & BBA</h3>
+                        <div class="lang-section telugu">
+                            <strong>తెలుగు వివరణ:</strong>
+                            <ul>
+                                <li><strong>B.A (History, Economics, Pol.Sci):</strong> UPSC Civil Services (IAS/IPS), APPSC/TSPSC Groups పరీక్షలకు 100% సరిపోతుంది[cite: 1, 2].</li>
+                                <li><strong>BCA & BBA:</strong> BCA ద్వారా Non-MPC విద్యార్థులు ఐటీలోకి వెళ్ళవచ్చు[cite: 1, 2]; BBA ద్వారా మేనేజ్‌మెంట్ & HR అవకాశాలు వస్తాయి[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                        <div class="lang-section english">
+                            <strong>English Explanation:</strong>
+                            <ul>
+                                <li><strong>B.A (HEP):</strong> Direct foundation for IAS, IPS, State Public Service Exams, and Law[cite: 1, 2].</li>
+                                <li><strong>BCA & BBA:</strong> BCA offers IT careers to non-MPC students[cite: 1, 2]; BBA opens corporate HR & management roles[cite: 1, 2].</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <div class="filter-container">
+            <input type="text" id="searchInput" placeholder="🔍 Search updates by keyword..." onkeyup="filterUpdates()">
+            <div class="category-tags">
+                <button class="tag-btn active" onclick="filterCategory(event, 'all')">All Updates</button>
+                <button class="tag-btn" onclick="filterCategory(event, 'job')">💼 Jobs</button>
+                <button class="tag-btn" onclick="filterCategory(event, 'news')">📰 News</button>
+            </div>
+        </div>
+
+        <!-- Govt Jobs Section -->
+        <section id="jobs" class="card">
+            <h2 class="card-title">💼 Latest Govt Job Notifications</h2>
+            <div id="jobsList" class="updates-grid"></div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="card">
+            <h2 class="card-title">📰 News & Service Updates</h2>
+            <div id="newsList" class="updates-grid"></div>
+        </section>
+
+        <!-- Admin Form Section -->
+        <section id="admin" class="card">
+            <h2 class="card-title">➕ Post New Job / News Update</h2>
+            <form id="postForm" onsubmit="addNewUpdate(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category:</label>
+                        <select id="postCategory">
+                            <option value="job">Govt Job Update</option>
+                            <option value="news">News Update</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Title:</label>
+                        <input type="text" id="postTitle" placeholder="e.g. APPSC Group 2 Drive" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description / Details:</label>
+                    <textarea id="postDesc" placeholder="Enter details..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Apply / Resource Link (Optional):</label>
+                    <input type="url" id="postLink" placeholder="https://example.com">
+                </div>
+                <button type="submit" class="submit-btn">Post Update ✨</button>
+            </form>
+        </section>
+
+        <!-- Helpdesk Contact Section -->
+        <section id="contact" class="card helpdesk-card">
+            <h2 class="card-title">📞 PSO క్విక్ హెల్ప్‌డెస్క్ (Contact Us)</h2>
+            <p class="subtitle">కెరీర్ గైడెన్స్ మరియు సందేహాల కోసం నేరుగా మమ్మల్ని సంప్రదించండి:</p>
+            
+            <div class="helpdesk-grid">
+                <div class="helpdesk-box">
+                    <div class="help-icon">📱</div>
+                    <h4>Direct Call / WhatsApp</h4>
+                    <p>+91 9392962003</p>
+                    <a href="https://wa.me/9392962003?text=Hello%20PSO%20Team,%20I%20need%20Career%20Guidance" target="_blank" class="help-btn wa-btn">WhatsApp లో మాట్లాడండి 💬</a>
+                </div>
+                <div class="helpdesk-box">
+                    <div class="help-icon">✉️</div>
+                    <h4>Official Email</h4>
+                    <p>contact@pso-org.in</p>
+                    <a href="mailto:contact@pso-org.in" class="help-btn email-btn">Email పంపండి 📧</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9030025364?text=Hello%20PSO%20Team,%20I%20need%20Career%20Guidance" class="floating-wa" target="_blank" title="Chat with Us on WhatsApp">💬</a>
+
+    <footer class="footer">
+        <p>&copy; 2026 Public Service Organization. Empowering Youth & Serving Communities.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
