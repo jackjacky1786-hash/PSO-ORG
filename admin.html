@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSO Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">PSO</div>
+            <div>
+                <h1 class="pso-heading">PSO - అడ్మిన్ డాష్‌బోర్డ్</h1>
+                <p>Public Service Organization | Admin Panel</p>
+            </div>
+        </div>
+        <a href="index.html" style="color: white; text-decoration: underline; font-weight: bold;">🏠 Main Website</a>
+    </header>
+
+    <div class="container" style="max-width: 600px;">
+        <section class="card form-section">
+            <h2 class="card-title">🔒 అడ్మిన్ పోస్ట్ అప్‌డేట్ (Admin Panel)</h2>
+            <form id="postForm">
+                <input type="password" id="adminPass" placeholder="🔑 Admin Password (pso123)" required>
+                
+                <label>క్యాటగిరీ ఎంచుకోండి:</label>
+                <select id="postCategory">
+                    <option value="Govt Jobs">Govt Jobs</option>
+                    <option value="Notifications">Notifications</option>
+                    <option value="General Updates">General Updates</option>
+                </select>
+                
+                <input type="text" id="postTitle" placeholder="శీర్షిక (Title)" required>
+                <textarea id="postDesc" placeholder="వివరాలు (Description)" rows="5" required></textarea>
+                <input type="url" id="postLink" placeholder="నోటిఫికేషన్ లింక్ (Optional)">
+                
+                <button type="submit" class="submit-btn">Post Update</button>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
