@@ -115,7 +115,7 @@ body {
     padding-bottom: 10px;
 }
 
-/* Founder Circle Styling */
+/* Founder Circle Styling - Full Face Cover */
 .founder-card {
     position: relative;
     border-top: 4px solid #ffd700;
@@ -133,14 +133,20 @@ body {
     border-radius: 20px;
 }
 
-/* Founder Image Full Cover Setup */
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .founder-avatar {
     width: 140px;
     height: 140px;
     min-width: 140px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #0056b3;
+    border: 4px solid var(--primary-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
     display: flex;
@@ -152,7 +158,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center; /* ముఖం (Face) కట్ కాకుండా పైన భాగం స్పష్టంగా కనిపిస్తుంది */
+    object-position: top center;
     display: block;
 }
 
@@ -243,6 +249,48 @@ body {
 }
 
 .submit-btn { width: 100%; background: #198754; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; }
+
+/* Contact Popup Modal Styling */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: modalPop 0.3s ease-out;
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color);
+}
 
 .whatsapp-float {
     position: fixed; bottom: 20px; right: 20px;

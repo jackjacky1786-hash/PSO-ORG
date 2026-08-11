@@ -10,6 +10,7 @@ import {
     query 
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
+// Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAVFvyuOauxGNNdNoCuZhwdHpPF1xIgGag",
     authDomain: "pso-career-hub-c083a.firebaseapp.com",
@@ -20,11 +21,13 @@ const firebaseConfig = {
     measurementId: "G-R98WD2C298"
 };
 
+// Initialize Firebase & Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 let allPostsData = [];
 
+// 1. Tab Switching Function (10th / Inter / Degree)
 window.openCareerTab = function(tabId) {
     const contents = document.querySelectorAll(".career-tab-content");
     const buttons = document.querySelectorAll(".tab-btn");
@@ -39,10 +42,12 @@ window.openCareerTab = function(tabId) {
     }
 };
 
+// 2. Dark Mode Toggle
 window.toggleTheme = function() {
     document.body.classList.toggle("dark-mode");
 };
 
+// 3. Search Filter Function
 window.filterPosts = function() {
     const searchVal = document.getElementById("searchInput").value.toLowerCase();
     const filtered = allPostsData.filter(post => 
@@ -53,6 +58,7 @@ window.filterPosts = function() {
     renderPosts(filtered);
 };
 
+// 4. Interactive Career Quiz Logic
 window.checkCareerSuggestion = function() {
     const val = document.getElementById("interestSelect").value;
     const resultDiv = document.getElementById("quizResult");
@@ -70,6 +76,18 @@ window.checkCareerSuggestion = function() {
     }
 };
 
+// 5. Contact Popup Modal Functions
+window.openContactModal = function() {
+    const modal = document.getElementById("contactModal");
+    if (modal) modal.style.display = "flex";
+};
+
+window.closeContactModal = function() {
+    const modal = document.getElementById("contactModal");
+    if (modal) modal.style.display = "none";
+};
+
+// 6. Delete Post Function (Admin Only with Password)
 window.deletePost = async function(id) {
     const pass = prompt("🔑 అడ్మిన్ పాస్‌వర్డ్ ఎంటర్ చేయండి:");
     if (pass !== "pso123") {
@@ -87,6 +105,7 @@ window.deletePost = async function(id) {
     }
 };
 
+// Event Listeners Initialization
 document.addEventListener("DOMContentLoaded", () => {
     fetchPosts();
 
@@ -94,8 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (postForm) {
         postForm.addEventListener("submit", addNewUpdate);
     }
+
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", sendContactMessage);
+    }
 });
 
+// 7. Add New Post (Admin Panel)
 async function addNewUpdate(event) {
     event.preventDefault();
 
@@ -128,6 +153,37 @@ async function addNewUpdate(event) {
     }
 }
 
+// 8. Contact Form Submission (Firebase + WhatsApp Redirect to 9392962003)
+async function sendContactMessage(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('contactName').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
+    try {
+        await addDoc(collection(db, "pso_messages"), {
+            name: name,
+            phone: phone,
+            message: message,
+            date: new Date().toLocaleDateString('te-IN'),
+            createdAt: Date.now()
+        });
+
+        closeContactModal();
+        document.getElementById("contactForm").reset();
+
+        // Target Phone Number Updated to 9392962003
+        const targetPhone = "919392962003"; 
+        const waMessage = encodeURIComponent(`Hello PSO Team,\n\nName: ${name}\nPhone: ${phone}\nQuery: ${message}`);
+        window.open(`https://wa.me/${targetPhone}?text=${waMessage}`, '_blank');
+
+    } catch (error) {
+        alert("సందేశం పంపడంలో లోపం జరిగింది: " + error.message);
+    }
+}
+
+// 9. Fetch Posts from Firestore
 async function fetchPosts() {
     const postsContainer = document.getElementById("postsContainer");
     if (!postsContainer) return;
@@ -152,6 +208,7 @@ async function fetchPosts() {
     }
 }
 
+// 10. Render Posts Dynamic Cards
 function renderPosts(posts) {
     const postsContainer = document.getElementById("postsContainer");
     if (!postsContainer) return;

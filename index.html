@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Header Section with Background Image -->
+    <!-- Header Section -->
     <header class="header">
         <div class="header-content">
             <div class="logo">PSO</div>
@@ -29,12 +29,13 @@
         <a href="#guidance">Detailed Guidance</a>
         <a href="#quiz">Career Quiz</a>
         <a href="#news">News & Events</a>
+        <a href="javascript:void(0)" onclick="openContactModal()">Contact Us</a>
         <a href="admin.html" style="color: #ffd700; font-weight: bold;">🔐 Admin Login</a>
     </nav>
 
     <div class="container">
         
-        <!-- Honourable Founder Special Section -->
+        <!-- Founder Section -->
         <section id="founder" class="card founder-card">
             <div class="founder-badge">👑 Founder & Chairman</div>
             <div class="founder-content">
@@ -307,8 +308,27 @@
 
     </div>
 
-    <!-- Floating WhatsApp Helpdesk Button -->
-    <a href="https://wa.me/919999999999?text=Hello%20PSO%20Team,%20I%20have%20a%20career%20guidance%20query." target="_blank" class="whatsapp-float">
+    <!-- Contact Us Popup Modal -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2 class="card-title" style="margin-bottom: 10px;">📞 Contact PSO Team</h2>
+            <p style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">మీ వివరాలు నమోదు చేయండి. నేరుగా WhatsApp ద్వారా మా టీమ్‌ను సంప్రదించవచ్చు:</p>
+            
+            <form id="contactForm">
+                <input type="text" id="contactName" placeholder="మీ పేరు (Full Name)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid var(--border-color); border-radius: 6px; box-sizing: border-box; background: var(--card-bg); color: var(--text-color);">
+                <input type="tel" id="contactPhone" placeholder="ఫోన్ నంబర్ (Phone Number)" required style="width: 100%; padding: 10px; margin-bottom: 12px; border: 1px solid var(--border-color); border-radius: 6px; box-sizing: border-box; background: var(--card-bg); color: var(--text-color);">
+                <textarea id="contactMessage" placeholder="మీ సందేశం లేదా సందేహం (Message/Query)" rows="3" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 6px; box-sizing: border-box; background: var(--card-bg); color: var(--text-color);"></textarea>
+                
+                <button type="submit" class="submit-btn" style="background: #25D366; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    💬 Send via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Helpdesk Button (Updated with 9392962003) -->
+    <a href="https://wa.me/9030025364?text=Hello%20PSO%20Team,%20I%20have%20a%20career%20guidance%20query." target="_blank" class="whatsapp-float">
        💬 Career Helpdesk
     </a>
 
